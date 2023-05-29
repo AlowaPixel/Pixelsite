@@ -21,8 +21,8 @@ nav div {
 }
 
 nav img {
-  border: 5px black dashed;
-  border-radius: 50px;
+  border: 3px black solid;
+  border-radius: 20px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -41,6 +41,7 @@ nav a:hover {
 
 /* Lijst met alle links die aparte bgcolors krijgen */
 
+/* Games */
 #kokmeeuw {
   background-color: cyan;
   color: black;
@@ -58,6 +59,15 @@ nav a:hover {
   background-color: blue;
 }
 
+#invaders {
+  background-color: red;
+}
+
+#snake {
+  background-color: chartreuse;
+  color: black;
+}
+
 #connect-4 {
   background-color: red;
 }
@@ -71,8 +81,49 @@ nav a:hover {
   color: black;
 }
 
+#pong {
+  background-color: white;
+  color:black;
+}
+#pong:hover {
+  border-color:gray;
+}
+
 #minesweeper {
   background-color: rgb(50,50,50);
+}
+
+#tictactoe {
+  background-color: cornsilk;
+  color: black;
+}
+
+#rps {
+  background-color: blue;
+}
+
+#spacerace {
+  background-color: rgb(0, 255, 217);
+  color: black;
+}
+
+/* Other */
+#fireworks {
+  background-color: violet;
+  color: black
+}
+
+#grappling {
+  background-color: darkblue;
+}
+
+#driving {
+  background-color: orange;
+}
+
+#golf {
+  background-color: greenyellow;
+  color: black;
 }
 
 #life {
@@ -83,4 +134,12 @@ nav a:hover {
 #ant {
   background-color: rgb(49, 0, 0);
   color:white;
+}
+
+#raycasting {
+  background-color: red;
+}
+
+#perlin {
+  background-color: gray;
 }

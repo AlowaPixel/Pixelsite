@@ -1,0 +1,24 @@
+body {
+  background-color: gray;
+  font-family:'Courier New', Courier, monospace;
+}
+
+#varEdits {
+  position: absolute;
+  left: 1065px;
+}
+
+nav a {
+  padding: 30px;
+  background-color: Black;
+  color: white;
+  text-decoration: none;
+  font-size: 40pt;
+  position: relative;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}

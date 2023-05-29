@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Butter Cheese and Eggs</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <style>
+        body {
+            font-family: "Roboto Light", Courier, Arial;
+            background-color: rgb(255,255,0);
+        }
+
+        #sidePanel {
+            position: absolute;
+            left: 610px;
+        }
+
+        #resetButton {
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 40px;
+            font-size: 40pt;
+        }
+
+        #winMessage {
+            margin: 0;
+            font-size: 64pt;
+            font-family: Courier, Arial;
+        }
+    </style>
+</head>
+<body>
+    <a href="../..">Home</a>
+    <h1>Tic Tac Toe</h1>
+    <p>A classic game of butter, cheese and eggs.</p>
+    <div id="sidePanel">
+        <button onclick="reset()" id="resetButton">Reset</button>
+        <p id="winMessage"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

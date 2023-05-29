@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <style>
+        body {
+            font-family:'Courier New', Courier, monospace;
+            background-color: #9bbc0f;
+        }
+
+        div {
+            position: absolute;
+            left: 610px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../..">Home</a>
+    <h1>Snake</h1>
+    <p>Use the arrow keys to move.</p>
+    <div id="sidePanel">
+        <h2>Side panel</h2>
+        Show grid: <input type="checkbox" id="showGrid" checked="true">
+        <p>Score: <strong id="score">...</strong></p>
+    </div>
+    <script src="bodysegments.js"></script>
+    <script src="apple.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>

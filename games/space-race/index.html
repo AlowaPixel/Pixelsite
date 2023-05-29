@@ -2,31 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lane game</title>
+    <title>Space Race</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
     <script src="../../libraries/p5.collide2d.js"></script>
-    <script src="actor.js"></script>
-    <script src="player.js"></script>
     <script src="enemy.js"></script>
+    <script src="player.js"></script>
     <script src="sketch.js"></script>
     <style>
         body {
-            background-color: darkcyan;
+            background-color: coral;
             font-family:'Courier New', Courier, monospace;
-        }
-
-        canvas {
-            border: 2px solid black;
+            display: flex;
         }
     </style>
 </head>
 <body>
     <a href="../..">Home</a>
-    <header>
-        <h1>Lanes</h1>
+    <div id="canvasContainer"></div>
+    <div style="margin-left: 5px">
+        <h1>Space Race</h1>
+        <p>Another arcade game remake!</p>
+
+        <h2>Rules</h2>
+        <p>Get over the finish line.</p>
+
+        <h2>Controls</h2>
         <p>
-            Lanes is an original game based on similar mobile games. Use the W & S keys or Up & Down Arrow keys.
+            A & D: Move Left Player<br>
+            Up & Down Arrow: Move Right Player
         </p>
-    </header>
+    </div>
 </body>
 </html>

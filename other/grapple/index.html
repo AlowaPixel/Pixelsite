@@ -2,48 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>why</title>
-    <script>
-        // Disable context menu
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
+    <title>Grappling demo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="../../libraries/matter.min.js"></script>
+    <script src="rectangle.js"></script>
+    <script src="player.js"></script>
     <script src="sketch.js"></script>
-    <script src="cell.js"></script>
     <style>
         body {
-            background-color: rgb(110, 0, 0);
             font-family:'Courier New', Courier, monospace;
+            background-color: rgb(0, 0, 200);
             color: white;
+        }
+
+        a {
+            color: lightblue;
         }
 
         #sidePanel {
             position: absolute;
-            left: 610px;
+            left: 810px;
         }
 
         #sidePanel button {
             border: none;
             font-size: 3em;
-            padding: 12px;
-            background-color: lightgray;
-        }
-
-        #mineNum {
-            width: 50px;
+            padding: 14px;
+            background-color: lightblue;
         }
     </style>
 </head>
 <body>
     <a href="../..">Home</a>
-    <h1>Minesweeper</h1>
+    <h1>Grappling demo with Matter.js</h1>
     <div id="sidePanel">
         <h2>Side panel</h2>
         <button onclick="reset()">Reset</button><br>
-        Start with <input type="number" value="20" id="mineNum"> mines.<br>
-        <br>
-        Reveal all cells at end: <input type="checkbox" checked="true" id="revealBool"><br>
-        <p>Time: <strong id="timer">...</strong></p>
+        Make sure to deselect, or the spacebar might trigger it.
+
+        <h3>Controls</h3>
+        <p>
+            A & D: Move<br>
+            Spacebar: Jump<br>
+            Mouse button: Grapple<br>
+        </p>
     </div>
 </body>
 </html>
