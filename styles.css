@@ -21,3 +21,8 @@ nav a {
   padding: 10px;
   border: 5px black dashed;
 }
+
+nav a:hover {
+  background-color: darkblue;
+  border-color: white;
+}
