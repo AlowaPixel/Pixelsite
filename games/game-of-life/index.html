@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Life</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="cell.js"></script>
+    <style>
+        body {
+            background-color: coral;
+            font-family: "Roboto Light", Courier, Arial;
+        }
+
+        #sidePanel {
+            position: absolute;
+            left: 1010px;
+        }
+
+        #sidePanel button {
+            border: none;
+            background-color: lightskyblue;
+            margin-bottom: 4px;
+            padding: 12px;
+            font-size: 3em;
+        }
+
+        #runningIndicator {
+            font-size: 13pt;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <header>
+        <h1>Conway's game of life</h1>
+        <p>
+            The moment I found out about this... thing's existence, I immediately wanted to make it.<br>
+            Use the mouse to wake cells while the simulation is not running.
+        </p>
+    </header>
+    <div id="sidePanel">
+        <h2>Control panel</h2>
+        <button id="startStopButton" onclick="switchGoing()">Start/Stop</button><br>
+        <button id="resetButton" onclick="reset()">Reset</button><br>
+        Advancement speed: <input type="range" min="1" max="45" value="2.75" id="updateSpeedSlider"><br>
+        <br>
+        <em id="runningIndicator">...</em>
+        <h3>Info</h3>
+        <p>
+            For if you've never heard of the Game of Life, it is a cellular automaton created by mathematician John Conway in 1970.
+        </p>
+        <h3>Rules</h3>
+        <p>
+            Any given cell can have 1 of 2 states: alive or dead. Every so often we advance a generation and apply the following rules:<br>
+            - A live cell with 2 or 3 live neighbors survives<br>
+            - A dead cell with 3 live neighbors becomes alive<br>
+            - Any other cell dies/stays dead<br>
+        </p>
+    </div>
+</body>
+</html>

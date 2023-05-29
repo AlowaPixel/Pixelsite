@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dino game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="/libraries/p5.collide2d.js"></script>
+    <style>
+        body {
+            background-color: rgb(125, 125, 255);
+            font-family: "Roboto Light", Courier, Arial;
+        }
+
+        canvas {
+            border: solid 2px darkgray;
+        }
+
+        #sidePanel {
+            position: absolute;
+            left: 820px;
+        }
+
+        #sidePanel #resetButton {
+            border: none;
+            background-color: green;
+            padding: 30px 70px;
+            font-size: 64pt;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>The World Famous Chrome Dino Game</h1>
+    <div id="sidePanel">
+        <h2>Side panel</h2>
+        <button onclick="reset()" id="resetButton">Reset</button><br>
+        Make sure to deselect, or the spacebar might trigger it.<br>
+        <br>
+        <h3>Controls</h3>
+        <p>
+            Spacebar: Jump
+        </p>
+    </div>
+    <script src="cactus.js"></script>
+    <script src="dino.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

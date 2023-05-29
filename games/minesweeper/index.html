@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>why</title>
+    <script>
+        // Disable context menu
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="cell.js"></script>
+    <style>
+        body {
+            background-color: rgb(110, 0, 0);
+            font-family: "Roboto Light", Courier, Arial;
+            color: white;
+        }
+
+        #sidePanel {
+            position: absolute;
+            left: 610px;
+        }
+
+        #sidePanel button {
+            border: none;
+            font-size: 3em;
+            padding: 12px;
+            background-color: lightgray;
+        }
+
+        #mineNum {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Minesweeper</h1>
+    <div id="sidePanel">
+        <h2>Side panel</h2>
+        <button onclick="reset()">Reset</button><br>
+        Start with <input type="number" value="20" id="mineNum"> mines.<br>
+        <br>
+        Reveal all cells at end: <input type="checkbox" checked="true" id="revealBool"><br>
+        <p>Time: <strong id="timer">...</strong></p>
+    </div>
+</body>
+</html>

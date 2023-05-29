@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Night Fight</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="/libraries/matter.min.js"></script>
+    <script src="/libraries/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="rectangle.js"></script>
+    <script src="actor.js"></script>
+    <script src="player.js"></script>
+    <script src="enemy.js"></script>
+    <style>
+        body, html {
+            background-color: rgb(50, 50, 50);
+            font-family: "Roboto Light", Courier, Arial;
+            color: white;
+            text-align: center;
+
+            margin: 0;
+        }
+
+        canvas {
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+
+        p {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Night Fight</h1>
+    <p>
+        Night Fight is an arcade style game based on Nintendo's Balloon Fight. I made it, because I was kind of tired of
+        making grid-based games all the time :P (Also, this is my first game with sound)<br>
+        Use A & D to move and the spacebar to flap. If you're higher up than an enemy when you collide with it, it dies.
+        Otherwise, you lose health.
+    </p>
+</body>
+</html>

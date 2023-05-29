@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Langton's ant</title>
+    <script>
+        // Disable context menu
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="cell.js"></script>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: "Roboto Light", Courier, Arial;
+        }
+
+        #sidePanel {
+            position: absolute;
+            left: 1010px;
+        }
+
+        #sidePanel button {
+            border: none;
+            background-color: blue;
+            font-size: 3em;
+            padding: 14px;
+        }
+
+        #sidePanel button:active {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>Langton's ant</h1>
+    <p>
+        The simulation starts when you place the ant. You can wake cells or even move the ant while the simulation is running.<br>
+        The ant will wrap around the screen if it gets to the edge.
+    </p>
+    <div id="sidePanel">
+        <h2>Side panel</h2>
+        <button onclick="reset()">Reset</button><br>
+        Advancement speed: <input type="range" min="1" max="120" value="3" id="updateSpeedSlider">
+        <p>Generation <strong id="gen"></strong></p>
+
+        <h3>Rules</h3>
+        <p>
+            At the start of the game, we name one specific cell the ant and when we advance a generation, we apply the following rules:<br>
+            - If the current cell is alive, we kill it and turn 90° clockwise.<br>
+            - If the current cell is dead, we wake it and turn 90° counter-clockwise.<br>
+            - Then, we go one cell forward.<br>
+        </p>
+
+        <h3>Controls</h3>
+        <p>
+            Left mouse button: Change state of cell<br>
+            Right mouse button: Place ant and start<br>
+            Esc: Remove ant<br>
+        </p>
+    </div>
+</body>
+</html>
