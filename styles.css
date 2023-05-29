@@ -10,13 +10,17 @@ nav {
   overflow:hidden
 }
 
-nav div {
+nav div, nav img {
   margin: 20px;
+}
+
+nav img {
+  border: 5px black dashed;
+  border-radius: 50px;
 }
 
 nav a {
   color:white;
-  background-color: purple;
   text-decoration: none;
   padding: 10px;
   border: 5px black dashed;
@@ -25,4 +29,10 @@ nav a {
 nav a:hover {
   background-color: darkblue;
   border-color: white;
+}
+
+/* Lijst met alle links die aparte bgcolors krijgen */
+
+#kokmeeuw {
+  background-color: purple;
 }
