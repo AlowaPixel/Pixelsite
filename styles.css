@@ -4,11 +4,33 @@ body {
   font-family:'Courier New', Courier, monospace;
 }
 
+html, body {
+  padding: 0;
+}
+
+html, body, header {
+  margin: 0;
+  border: 0;
+}
+
+header {
+  background-color: rgb(255, 61, 94);
+  overflow: hidden;
+  border-radius: 0 0 8px 8px;
+}
+
+canvas {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
 nav {
   display: flex;
   flex-direction: row;
   overflow:hidden;
-  align-items:flex-start;
+  justify-content: center;
+  text-align: center;
 }
 
 nav div, nav img {
@@ -25,6 +47,7 @@ nav img {
   border-radius: 20px;
   margin-top: auto;
   margin-bottom: auto;
+  width: 50%;
 }
 
 nav a {
