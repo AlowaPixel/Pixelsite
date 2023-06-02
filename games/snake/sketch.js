@@ -45,16 +45,16 @@ function draw() {
         dir = nextDir;
         switch (dir) {
             case "left":
-                bodySegments[0].x -= w;
+                bodySegments[0].x = (bodySegments[0].x + width - w) % width;
                 break;
             case "right":
-                bodySegments[0].x += w;
+                bodySegments[0].x = (bodySegments[0].x + width + w) % width;
                 break;
             case "up":
-                bodySegments[0].y -= w;
+                bodySegments[0].y = (bodySegments[0].y + width - w) % width;
                 break;
             case "down":
-                bodySegments[0].y += w;
+                bodySegments[0].y = (bodySegments[0].y + width + w) % width;
         }
     }
 
@@ -66,9 +66,9 @@ function draw() {
     }
 
     // Check collision with sides
-    if (bodySegments[0].x < 0 || bodySegments[0].x >= width || bodySegments[0].y < 0 || bodySegments[0].y >= height) {
-        gameOver();
-    }
+    // if (bodySegments[0].x < 0 || bodySegments[0].x >= width || bodySegments[0].y < 0 || bodySegments[0].y >= height) {
+    //     gameOver();
+    // }
 
     // Check collision with apple
     if (bodySegments[0].x == apple.x && bodySegments[0].y == apple.y) {
